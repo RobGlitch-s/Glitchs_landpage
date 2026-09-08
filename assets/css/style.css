@@ -92,7 +92,6 @@ header nav ul {
     list-style: none;
 }
 
-
 /* Botões do menu */
 
 header nav ul li a {
@@ -109,44 +108,30 @@ header nav ul li a {
     transition: 0.3s ease;
 }
 
-header ul li {
-    
-    display: inline-block;
-
-    list-style: none;
-}
-
-/* Botão do menu ativo */
-
-header ul li a img {
-    margin-left: auto;
-
-    text-decoration: none;
-
-    width: 10%;
-    height: auto;
-
-    border-radius: 15%;
-    
-    border-color: rgba(1, 169, 247, 0.308);
-    border-width: 2px;
-    border-style: solid;
-
-    transition: 0.3s ease;
-}
-
-
 /* Efeito ao passar o mouse */
 
 header nav ul li a:hover {
     background: rgba(255, 255, 255, 0.15);
 }
 
+/* Botão da logo */
+
+header a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    line-height: 0;
+}
+
 /* Logo */
 
-header img {
-    width: 8%;
+header a img {
+    display: block;
+    width: clamp(90px, 12vw, 150px);
     height: auto;
+    max-width: 100%;
     border-radius: 5%;
     border-color: rgba(1, 169, 247, 0.308);
     border-width: 2px;
@@ -163,7 +148,7 @@ header img {
 
 /* Efeito ao passar o mouse na logo */
 
-header img:hover {
+header a img:hover {
     transform: scale(1.1);
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }

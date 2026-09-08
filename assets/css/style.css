@@ -92,12 +92,13 @@ header nav ul {
     list-style: none;
 }
 
+
 /* Botões do menu */
 
 header nav ul li a {
     display: inline-block;
 
-    padding: 10px 18px;
+    padding: 20px 20px;
 
     color: #ffffff;
     text-decoration: none;
@@ -114,7 +115,7 @@ header nav ul li a:hover {
     background: rgba(255, 255, 255, 0.15);
 }
 
-/* Botão da logo */
+/* Logo */
 
 header a {
     display: inline-flex;
@@ -125,14 +126,10 @@ header a {
     line-height: 0;
 }
 
-/* Logo */
-
 header a img {
-    display: block;
-    width: clamp(90px, 12vw, 150px);
+    width: clamp(60px, 8vw, 90px);
     height: auto;
-    max-width: 100%;
-    border-radius: 5%;
+    border-radius: 15%;
     border-color: rgba(1, 169, 247, 0.308);
     border-width: 2px;
     border-style: solid;

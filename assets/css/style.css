@@ -109,6 +109,32 @@ header nav ul li a {
     transition: 0.3s ease;
 }
 
+header ul li {
+    
+    display: inline-block;
+
+    list-style: none;
+}
+
+/* Botão do menu ativo */
+
+header ul li a img {
+    margin-left: auto;
+
+    text-decoration: none;
+
+    width: 10%;
+    height: auto;
+
+    border-radius: 15%;
+    
+    border-color: rgba(1, 169, 247, 0.308);
+    border-width: 2px;
+    border-style: solid;
+
+    transition: 0.3s ease;
+}
+
 
 /* Efeito ao passar o mouse */
 

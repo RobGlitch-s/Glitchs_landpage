@@ -56,7 +56,7 @@ header {
     justify-content: space-between;
     align-items: center;
 
-    padding: 20px 40px;
+    padding: 1% 1%;
 
     background:
         linear-gradient(
@@ -127,9 +127,9 @@ header a {
 }
 
 header a img {
-    width: clamp(60px, 8vw, 90px);
+    width: clamp(20px, 8vw, 70px);
     height: auto;
-    border-radius: 15%;
+    border-radius: 20%;
     border-color: rgba(1, 169, 247, 0.308);
     border-width: 2px;
     border-style: solid;
@@ -717,7 +717,6 @@ main {
     padding: 130px 0;
 }
 
-
 /* linha entre seções */
 
 .section-wrap::before {
@@ -1062,7 +1061,7 @@ main {
 
     z-index: 2;
 
-    font-size: clamp(35px, 5vw, 70px);
+    font-size: clamp(10px, 5vw, 45px);
 
     font-weight: 900;
 
@@ -1117,7 +1116,7 @@ main {
 
     z-index: 2;
 
-    font-size: clamp(24px, 3vw, 42px);
+    font-size: clamp(12px, 3vw, 21px);
 
     line-height: 0.9;
 
@@ -1713,12 +1712,189 @@ footer a:hover {
    TELAS MUITO PEQUENAS
    ========================================================= */
 
-@media (max-width: 400px) {
+@media screen and (max-width: 600px) {
+    .hero h1 {
+        font-size: clamp(20px, 14vw, 55px);
+    }
+
+    .hero-text {
+        font-size: 15px !important;
+    }
 
     header img {
         width: 70px;
     }
 
+    header nav ul li a {
+        padding: 7px 8px;
+
+        font-size: 10px;
+    }
+
+    .hero {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .section-wrap {
+        width: calc(100% - 40px);
+    }
+
+    .profile-card {
+        left: 20px;
+        right: 20px;
+    }
+
+    .project {
+        display: block;
+
+        text-decoration: none;
+
+        cursor: pointer;
+    }
+
+
+    .project-image {
+        position: relative;
+
+        width: 75%;
+
+        aspect-ratio: 16 / 10;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        overflow: hidden;
+
+        border-radius: 12px;
+
+        border: 1px solid rgba(255, 255, 255, 0.08);
+
+        transition:
+            transform 0.4s ease,
+            border-color 0.4s ease,
+            box-shadow 0.4s ease;
+    }
+
+
+    .project:hover .project-image {
+        transform: translateY(-7px);
+
+        border-color: rgba(0, 255, 255, 0.35);
+
+        box-shadow:
+            0 20px 60px rgba(0, 0, 0, 0.4),
+            0 0 35px rgba(0, 255, 255, 0.06);
+    }
+
+    .project-image-blue {
+        background:
+            radial-gradient(
+                circle at 10% 10%,
+                rgba(0, 255, 255, 0.35),
+                transparent 25%
+            ),
+            linear-gradient(
+                135deg,
+                #061d29,
+                #101020 55%,
+                #24103b
+            );
+    }
+
+
+    .project-image-blue::before {
+        content: "";
+
+        position: absolute;
+
+        width: 45%;
+
+        aspect-ratio: 1;
+
+        border: 1px solid rgba(0, 255, 255, 0.2);
+
+        transform: rotate(45deg);
+
+        box-shadow:
+            0 0 45px rgba(0, 255, 255, 0.08);
+    }
+
+
+    .project-image-blue span {
+        position: relative;
+
+        z-index: 2;
+
+        font-size: clamp(10px, 5vw, 45px);
+
+        font-weight: 900;
+
+        letter-spacing: -4px;
+
+        color: #ffffff;
+
+        text-shadow:
+            5px 5px 0 rgba(0, 255, 255, 0.2);
+    }
+
+    .project-image-yellow {
+        background:
+            radial-gradient(
+                circle at 10% 10%,
+                rgba(255, 230, 0, 0.25),
+                transparent 30%
+            ),
+            linear-gradient(
+                135deg,
+                #29220a,
+                #18150a,
+                #2c1c08
+            );
+    }
+
+
+    .project-image-yellow::before {
+        content: "";
+
+        position: absolute;
+
+        width: 45%;
+
+        border: 1px solid rgba(255, 220, 50, 0.3);
+
+        border-radius: 50%;
+
+        box-shadow:
+            0 0 60px rgba(255, 220, 50, 0.08);
+    }
+
+
+    .project-image-yellow span {
+        position: relative;
+
+        z-index: 2;
+
+        font-size: clamp(12px, 3vw, 21px);
+
+        line-height: 0.9;
+
+        font-weight: 900;
+
+        text-align: center;
+
+        letter-spacing: -2px;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    header img {
+        width: 70px;
+    }
 
     header nav ul li a {
         padding: 7px 8px;
@@ -1742,4 +1918,17 @@ footer a:hover {
         left: 20px;
         right: 20px;
     }
+
+}
+
+@media (max-width: 350px) {
+
+    .hero h1 {
+        font-size: clamp(20px, 14vw, 55px);
+    }
+
+    .hero-text {
+        font-size: 15px !important;
+    }
+
 }

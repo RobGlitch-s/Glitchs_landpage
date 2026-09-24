@@ -1,0 +1,202 @@
+/* =========================================================
+   TELAS MUITO PEQUENAS
+   ========================================================= */
+
+@media screen and (max-width: 600px) {
+    .hero h1 {
+        font-size: clamp(20px, 14vw, 55px);
+    }
+
+    .hero-text {
+        font-size: 15px !important;
+    }
+
+    header img {
+        width: 70px;
+    }
+
+    header nav ul li a {
+        padding: 7px 8px;
+
+        font-size: 10px;
+    }
+
+    .hero {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .section-wrap {
+        width: calc(100% - 40px);
+    }
+
+    .profile-card {
+        left: 20px;
+        right: 20px;
+    }
+
+    .project {
+        display: block;
+
+        text-decoration: none;
+
+        cursor: pointer;
+    }
+
+
+    .project-image {
+        position: relative;
+
+        width: 75%;
+
+        aspect-ratio: 16 / 10;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        overflow: hidden;
+
+        border-radius: 12px;
+
+        border: 1px solid rgba(255, 255, 255, 0.08);
+
+        transition:
+            transform 0.4s ease,
+            border-color 0.4s ease,
+            box-shadow 0.4s ease;
+    }
+
+
+    .project:hover .project-image {
+        transform: translateY(-7px);
+
+        border-color: rgba(0, 255, 255, 0.35);
+
+        box-shadow:
+            0 20px 60px rgba(0, 0, 0, 0.4),
+            0 0 35px rgba(0, 255, 255, 0.06);
+    }
+}
+
+@media (max-width: 400px) {
+
+    header img {
+        width: 70px;
+    }
+
+    header nav ul li a {
+        padding: 7px 8px;
+
+        font-size: 10px;
+    }
+
+
+    .hero {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+
+    .section-wrap {
+        width: calc(100% - 40px);
+    }
+
+
+    .profile-card {
+        left: 20px;
+        right: 20px;
+    }
+
+}
+
+@media (max-width: 350px) {
+
+    .hero h1 {
+        font-size: clamp(20px, 14vw, 55px);
+    }
+
+    .hero-text {
+        font-size: 15px !important;
+    }
+
+}
+
+@media (orientation: portrait) {
+    .hero h1 {
+        font-size: clamp(20px, 14vw, 55px);
+    }
+
+    .hero-text {
+        font-size: 15px !important;
+    }
+
+    header img {
+        width: 70px;
+    }
+
+    header nav ul li a {
+        padding: 7px 8px;
+
+        font-size: 10px;
+    }
+
+    .hero {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .section-wrap {
+        width: calc(100% - 40px);
+    }
+
+    .profile-card {
+        left: 20px;
+        right: 20px;
+    }
+
+    .project {
+        display: block;
+
+        text-decoration: none;
+
+        cursor: pointer;
+    }
+
+
+    .project-image {
+        position: relative;
+
+        width: 75%;
+
+        aspect-ratio: 16 / 10;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        overflow: hidden;
+
+        border-radius: 12px;
+
+        border: 1px solid rgba(255, 255, 255, 0.08);
+
+        transition:
+            transform 0.4s ease,
+            border-color 0.4s ease,
+            box-shadow 0.4s ease;
+    }
+
+
+    .project:hover .project-image {
+        transform: translateY(-7px);
+
+        border-color: rgba(0, 255, 255, 0.35);
+
+        box-shadow:
+            0 20px 60px rgba(0, 0, 0, 0.4),
+            0 0 35px rgba(0, 255, 255, 0.06);
+    }
+}

@@ -65,11 +65,11 @@
             </div>
             <div class="project-grid">
                 <a class="project project-GlitchGames" href="https://robglitch-s.github.io/robglitchs.github.io/" target="_blank" rel="noreferrer">
-                    <div class="project-image project-image-blue"><span>Glitch's Games</span><b>↗</b></div>
+                    <div class="project-image project-image-blue"><img src="assets/imagens/GlitchGames.png" alt="Ilustração do projeto"><b>↗</b></div>
                     <div class="project-info"><div><strong>Robglitch's</strong><small>Identidade & site</small></div><span>2026</span></div>
                 </a>
                 <a class="project project-LogosThekne" href="https://github.com/RobGlitch-s/LogosThekne" target="_blank" rel="noreferrer">
-                    <div class="project-image project-image-blue"><span>Studying App</span><b>↗</b></div>
+                    <div class="project-image project-image-blue"><img src="assets/imagens/LogosThekne.png" alt="Ilustração do projeto"><b>↗</b></div>
                     <div class="project-info"><div><strong>LogosThekne</strong><small>App</small></div><span>2026</span></div>
                 </a>
                 <article class="project project-comming-soon">
@@ -84,6 +84,58 @@
             <h2>Tem uma ideia<br><em>na cabeça?</em></h2>
             <a class="contact-email" href="mailto:glitchs.studio@gmail.com">glitchs.studio@gmail.com <span>↗</span></a>
             <a class="contact-link" href="https://github.com/RobGlitch-s" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
+            <section class="contact-form">
+                <h3>Formulário de Contato</h3>
+                <form id="contact-form">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="from_name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="reply_to" required>
+
+                    <label for="assunto">Assunto:</label>
+                    <input type="text" id="assunto" name="subject" required>
+
+                    <label for="message">Mensagem:</label>
+                    <textarea id="message" name="message" required></textarea>
+
+                    <button type="submit">Enviar</button>
+                </form>
+                
+                <script type="text/javascript" src="https://jsdelivr.net"></script>
+                
+                <script type="text/javascript">
+                (function(){
+                    emailjs.init("service_bha3dwv");
+                })();
+
+                const form = document.getElementById('contact-form');
+                const submitBtn = document.getElementById('submit-btn');
+
+                form.addEventListener('submit', function(event) {
+                    event.preventDefault();
+
+                    // Altera o estado do botão para evitar cliques duplos
+                    submitBtn.innerText = 'Enviando...';
+                    submitBtn.disabled = true;
+
+                    emailjs.sendForm('SEU_SERVICE_ID_AQUI', 'SEU_TEMPLATE_ID_AQUI', this)
+                        .then(function() {
+                            alert('Mensagem enviada com sucesso!');
+                            form.reset(); // Limpa todos os campos
+                        }, function(error) {
+                            alert('Erro ao enviar: ' + JSON.stringify(error));
+                        })
+                        .finally(function() {
+                            // Restaura o botão ao estado original após o término da requisição
+                            submitBtn.innerText = 'Enviar Mensagem';
+                            submitBtn.disabled = false;
+                        });
+                });
+                </script>
+
+
+            </section>
         </section>
     </main>
     <footer>

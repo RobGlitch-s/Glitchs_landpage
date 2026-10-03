@@ -1151,6 +1151,16 @@ main {
     text-shadow:
         5px 5px 0 rgba(0, 255, 255, 0.2);
 }
+.project-image-blue img {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    opacity: 0.75;
+}
 
 
 /* =========================================================
@@ -1375,6 +1385,101 @@ main {
     background-clip: text;
 }
 
+.contact h3 {
+    position: relative;
+
+    z-index: 2;
+
+    margin-bottom: 30px;
+
+    font-size: clamp(18px, 3vw, 22px);
+
+    line-height: 1.5;
+
+    color: rgb(255, 255, 255);
+}
+
+.contact-form {
+
+    padding-top: 3%;
+
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+
+    padding: 15px 20px;
+
+    border-radius: 8px;
+
+    background: rgba(0, 0, 0, 0.25);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    outline: none;
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    background: rgba(0, 0, 0, 0.35);
+
+    border-color: rgba(0, 255, 255, 0.35);
+}
+
+.contact-form textarea {
+    min-height: 150px;
+
+    resize: none;
+}
+
+.contact-form button {
+
+    width: fit-content;
+
+    padding: 1% 2%;
+
+    border-radius: 10%;
+    border: 1px transparent;
+
+    background:
+        linear-gradient(
+            135deg,
+            #00ffff,
+            #8d4dff
+        );
+
+    color: #05050a;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
 
 /* =========================================================
    LINKS DE CONTATO
@@ -1540,255 +1645,5 @@ footer a:hover {
 
 .hero-art {
     animation: float 6s ease-in-out infinite;
-}
-
-
-/* =========================================================
-   RESPONSIVIDADE
-   TABLET
-   ========================================================= */
-
-@media (max-width: 900px) {
-
-    .hero {
-        grid-template-columns: 1fr;
-
-        min-height: auto;
-
-        padding-top: 80px;
-        padding-bottom: 150px;
-    }
-
-
-    .hero-copy {
-        max-width: 700px;
-    }
-
-
-    .hero-art {
-        width: min(70vw, 500px);
-
-        margin: 70px auto 0;
-    }
-
-
-    .profile-card {
-        right: 5%;
-        bottom: 40px;
-    }
-
-
-    .about-content {
-        grid-template-columns: 1fr;
-
-        gap: 45px;
-    }
-
-
-    .section-heading {
-        grid-template-columns: 1fr;
-
-        gap: 30px;
-    }
-
-
-    .section-heading > p:last-child {
-        margin-left: 0;
-    }
-
-
-    .project-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-
-/* =========================================================
-   CELULAR
-   ========================================================= */
-
-@media (max-width: 600px) {
-
-    /* Header */
-
-    header {
-        padding: 15px 20px;
-    }
-
-
-    header nav ul {
-        gap: 5px;
-    }
-
-
-    header nav ul li a {
-        padding: 8px 10px;
-
-        font-size: 11px;
-    }
-
-
-    /* Hero */
-
-    .hero {
-        padding: 65px 25px 130px;
-    }
-
-
-    .hero h1 {
-        font-size: clamp(46px, 14vw, 68px);
-
-        letter-spacing: -3px;
-    }
-
-
-    .hero-text {
-        font-size: 16px !important;
-    }
-
-
-    .hero-actions {
-        align-items: stretch;
-
-        flex-direction: column;
-
-        max-width: 260px;
-    }
-
-
-    .button {
-        width: 100%;
-    }
-
-
-    .hero-art {
-        width: 80vw;
-
-        max-width: 350px;
-
-        margin-top: 60px;
-    }
-
-
-    .profile-card {
-        left: 25px;
-        right: 25px;
-
-        bottom: 35px;
-
-        min-width: auto;
-    }
-
-
-    .scroll-hint {
-        display: none;
-    }
-
-
-    /* Sections */
-
-    .section-wrap {
-        width: calc(100% - 50px);
-
-        padding: 90px 0;
-    }
-
-
-    .section-label {
-        margin-bottom: 35px;
-    }
-
-
-    /* Sobre */
-
-    .about {
-        min-height: auto;
-    }
-
-
-    .about h2,
-    .section-heading h2 {
-        font-size: clamp(44px, 13vw, 62px);
-
-        letter-spacing: -3px;
-    }
-
-
-    .about-content p {
-        font-size: 15px !important;
-    }
-
-
-    .about-mark {
-        font-size: 80px;
-
-        bottom: 30px;
-    }
-
-
-    /* Trabalhos */
-
-    .work {
-        padding-bottom: 100px;
-    }
-
-
-    .project-grid {
-        gap: 15px;
-    }
-
-
-    .project-image {
-        aspect-ratio: 1 / 0.9;
-    }
-
-
-    .project-info {
-        padding-top: 14px;
-    }
-
-
-    /* Contato */
-
-    .contact {
-        min-height: 500px;
-    }
-
-
-    .contact h2 {
-        font-size: clamp(48px, 14vw, 68px);
-
-        letter-spacing: -4px;
-
-        margin-bottom: 35px;
-    }
-
-
-.contact-email {
-    font-size: 18px;
-
-    gap: 10px;
-
-    margin-bottom: 20px;
-}
-
-
-.contact-link {
-    font-size: 14px;
-
-    gap: 10px;
-}
-
-
-    /* Footer */
-
-    footer {
-        flex-direction: column;
-
-        align-items: flex-start;
-
-        padding: 25px;
-    }
-
 }
 

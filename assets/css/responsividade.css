@@ -1,4 +1,253 @@
 /* =========================================================
+   RESPONSIVIDADE
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        min-height: auto;
+
+        padding-top: 80px;
+        padding-bottom: 150px;
+    }
+
+
+    .hero-copy {
+        max-width: 700px;
+    }
+
+
+    .hero-art {
+        width: min(70vw, 500px);
+
+        margin: 70px auto 0;
+    }
+
+
+    .profile-card {
+        right: 5%;
+        bottom: 40px;
+    }
+
+
+    .about-content {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+
+    .section-heading {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+
+    .section-heading > p:last-child {
+        margin-left: 0;
+    }
+
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =========================================================
+   CELULAR
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    /* Header */
+
+    header {
+        padding: 15px 20px;
+    }
+
+
+    header nav ul {
+        gap: 5px;
+    }
+
+
+    header nav ul li a {
+        padding: 8px 10px;
+
+        font-size: 11px;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        padding: 65px 25px 130px;
+    }
+
+
+    .hero h1 {
+        font-size: clamp(46px, 14vw, 68px);
+
+        letter-spacing: -3px;
+    }
+
+
+    .hero-text {
+        font-size: 16px !important;
+    }
+
+
+    .hero-actions {
+        align-items: stretch;
+
+        flex-direction: column;
+
+        max-width: 260px;
+    }
+
+
+    .button {
+        width: 100%;
+    }
+
+
+    .hero-art {
+        width: 80vw;
+
+        max-width: 350px;
+
+        margin-top: 60px;
+    }
+
+
+    .profile-card {
+        left: 25px;
+        right: 25px;
+
+        bottom: 35px;
+
+        min-width: auto;
+    }
+
+
+    .scroll-hint {
+        display: none;
+    }
+
+
+    /* Sections */
+
+    .section-wrap {
+        width: calc(100% - 50px);
+
+        padding: 90px 0;
+    }
+
+
+    .section-label {
+        margin-bottom: 35px;
+    }
+
+
+    /* Sobre */
+
+    .about {
+        min-height: auto;
+    }
+
+
+    .about h2,
+    .section-heading h2 {
+        font-size: clamp(44px, 13vw, 62px);
+
+        letter-spacing: -3px;
+    }
+
+
+    .about-content p {
+        font-size: 15px !important;
+    }
+
+
+    .about-mark {
+        font-size: 80px;
+
+        bottom: 30px;
+    }
+
+
+    /* Trabalhos */
+
+    .work {
+        padding-bottom: 100px;
+    }
+
+
+    .project-grid {
+        gap: 15px;
+    }
+
+
+    .project-image {
+        aspect-ratio: 1 / 0.9;
+    }
+
+
+    .project-info {
+        padding-top: 14px;
+    }
+
+
+    /* Contato */
+
+    .contact {
+        min-height: 500px;
+    }
+
+
+    .contact h2 {
+        font-size: clamp(48px, 14vw, 68px);
+
+        letter-spacing: -4px;
+
+        margin-bottom: 35px;
+    }
+
+
+.contact-email {
+    font-size: 18px;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+}
+
+
+.contact-link {
+    font-size: 14px;
+
+    gap: 10px;
+}
+
+
+    /* Footer */
+
+    footer {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 25px;
+    }
+
+}
+
+/* =========================================================
    TELAS MUITO PEQUENAS
    ========================================================= */
 
